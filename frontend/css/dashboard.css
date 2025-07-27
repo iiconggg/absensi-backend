@@ -1,0 +1,257 @@
+/* dashboard.css */
+/* File ini berisi style CSS untuk halaman dashboard admin.
+   Mengatur tata letak sidebar, konten utama, form, tabel, tombol, dan elemen lainnya.
+   Desain menggunakan warna biru dan putih dengan tampilan modern dan responsif.
+*/
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #f1f5f9;
+    color: #333;
+}
+
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 230px;
+    background: #416297;
+    color: white;
+}
+
+.brand {
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.sidebar-logo {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+  object-fit: contain;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-menu li a {
+    display: block;
+    padding: 12px 16px;
+    color: #2c394b;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li a.active {
+    background-color: #334155;
+    color: #fff;
+}
+
+.sidebar .brand {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar li a,
+.sidebar li button {
+    padding: 12px 16px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.sidebar li a.active,
+.sidebar li a:hover,
+.sidebar li button:hover {
+    background-color: #1d4ed8;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.sidebar li.active a {
+    background-color: #1d4ed8;
+    color: #fff;
+}
+
+/* Konten Utama */
+.main-content section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+h2,
+h3 {
+    margin-bottom: 15px;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Form Input */
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Tombol */
+button {
+    padding: 10px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+#cancel-edit {
+    background-color: #ef4444;
+}
+
+#cancel-edit:hover {
+    background-color: #dc2626;
+}
+
+.table-karyawan {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    margin-top: 10px;
+}
+
+.table-karyawan th {
+    background-color: #f8fafc;
+    text-align: left;
+    padding: 12px 16px;
+    color: #374151;
+    font-weight: 600;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.table-karyawan td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+    color: #333;
+}
+
+.table-karyawan td:first-child {
+    font-weight: 500;
+}
+
+.table-karyawan button {
+    padding: 6px 10px;
+    font-size: 13px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.table-karyawan button:hover {
+    opacity: 0.9;
+}
+
+.table-karyawan .edit-btn {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.table-karyawan .delete-btn {
+    background-color: #ef4444;
+    color: white;
+}
+
+/* List Style */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: white;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.cuti-item {
+    background-color: #f9fafb;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+}
+
+.cuti-item .status {
+    font-weight: bold;
+    color: #4caf50;
+    /* bisa diganti dengan dynamic warna */
+}

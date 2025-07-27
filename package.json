@@ -1,0 +1,19 @@
+{
+  "name": "web-admin-rt",
+  "version": "1.0.0",
+  "description": "Backend server for web-admin-rt project",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "start:dev": "nodemon backend/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase": "^12.0.0",
+    "firebase-admin": "^11.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

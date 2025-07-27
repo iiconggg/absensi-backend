@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" href="data:,">
+  <title>Dashboard Admin</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="brand">
+<img src="/img/logo-wiratama.png" alt="Logo Wiratama" class="sidebar-logo" />
+      </div>
+
+      <ul class="sidebar-menu">
+        <li><a href="#karyawan">👤 Karyawan</a></li>
+        <li><a href="#cuti">📝 Cuti</a></li>
+        <li><a href="#statistik">📊 Statistik</a></li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <button id="logout-btn">🚪 Logout</button>
+      </div>
+    </nav>
+
+    <!-- Konten Utama -->
+    <main class="main-content">
+      <!-- Bagian Form Karyawan -->
+      <section id="karyawan">
+        <h2>Form Karyawan</h2>
+        <form id="employee-form" class="card">
+          <input type="hidden" id="employee-id" />
+          <input type="text" id="nama" placeholder="Nama" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="text" id="status" placeholder="Posisi" required />
+          <button type="submit">Simpan</button>
+          <button type="button" id="cancel-edit" style="display:none">Batal</button>
+        </form>
+      </section>
+
+      <!-- Bagian Daftar Karyawan -->
+      <section>
+        <h3>Daftar Karyawan</h3>
+        <table class="table-karyawan">
+          <thead>
+            <tr>
+              <th>Nama & Email</th>
+              <th>Posisi</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="employee-list">
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Bagian Daftar Karyawan yang Sudah Absensi -->
+      <section>
+        <h3>Daftar Karyawan yang Sudah Absensi</h3>
+        <table class="table-karyawan">
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Status Absensi</th>
+              <th>IP</th>
+              <th>Keterangan</th>
+              <th>Waktu</th>
+            </tr>
+          </thead>
+          <tbody id="attendance-list">
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Bagian Daftar Pengajuan Cuti -->
+      <section id="cuti">
+        <h3>Daftar Pengajuan Cuti</h3>
+        <button id="approve-all">Setujui Semua Pengajuan Cuti</button>
+        <ul id="cuti-list"></ul>
+      </section>
+
+      <!-- Bagian Statistik Absensi -->
+      <section id="statistik">
+        <h3>📊 Statistik Absensi</h3>
+        <canvas id="absensiChart" width="400" height="200"></canvas>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="../js/dashboard.js"></script>
+</body>
+
+</html>
