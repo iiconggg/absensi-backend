@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Web Admin RT - Absensi Karyawan
 
 ## Struktur Proyek
@@ -36,3 +37,6 @@
 - Backend menggunakan ES Modules, pastikan Node.js versi terbaru.  
 - Pastikan file `serviceAccountKey.json.json` ada dan valid.  
 - Struktur sudah diorganisir agar mudah dikembangkan dan dipelihara.  
+=======
+# absensi-backend
+>>>>>>> 773aba565c8283610386c3e00a57c0ee469d25ad
